@@ -78,7 +78,7 @@ function MainNavbar() {
 
         <div className="navbar-section buttons-section">
           <button className="navbar-button start-program-button">
-            Start Program
+           Health Mapping
           </button>
 
           <button className="navbar-button menu-button menu-button-mobile" onClick={toggleMobileMenu} aria-label="Open menu">
