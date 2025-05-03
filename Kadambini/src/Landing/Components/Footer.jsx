@@ -15,7 +15,7 @@ function Footer() {
                          <small>&copy; {currentYear} Arogya Kadambini. All Rights Reserved.</small>
                     </Col>
                     <Col md={4} className="mb-3 mb-md-0">
-                        <Nav className="justify-content-center footer-links"> {/* Add custom class */}
+                        <Nav className="justify-content-center footer-links"> 
                             <Nav.Link href="#about" className="text-light">About</Nav.Link>
                             <Nav.Link href="#faq" className="text-light">FAQ</Nav.Link>
                             <Nav.Link href="#contact" className="text-light">Contact</Nav.Link>
@@ -24,7 +24,6 @@ function Footer() {
                         </Nav>
                     </Col>
                     <Col md={4} className="text-center text-md-end">
-                        {/* Add Social Media Icons */}
                         <a href="#" className="text-light me-3"><i className="fab fa-linkedin fa-lg"></i></a> {/* Use Font Awesome or other icon library */}
                         <a href="#" className="text-light me-3"><i className="fab fa-instagram fa-lg"></i></a>
                         <a href="#" className="text-light"><i className="fab fa-facebook fa-lg"></i></a>

@@ -1,4 +1,3 @@
-// src/components/About.js
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import '../assets/css/Landing.css';
@@ -19,7 +18,6 @@ function About() {
                         </p>
                         <blockquote className="blockquote mt-4">
                             <p>"You can inherit more than just land or genes. You inherit health patterns and with ArogyaKadambini, you inherit wisdom."</p>
-                            {/* <footer className="blockquote-footer">Founder Name</footer> */}
                         </blockquote>
                     </Col>
                 </Row>

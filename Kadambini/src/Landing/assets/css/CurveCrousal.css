@@ -1,0 +1,67 @@
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center !important;
+  background-color: #faf3e0;
+}
+.mySwiper{
+  background-color: #faf3e0;
+}
+
+.swiper-slide .card-body {
+  width: 100%;
+  height: 250px;
+}
+
+@media screen and (max-width: 1200px) {
+  .swiper-slide .card-body {
+    height: 200px;
+  }
+}
+
+.swiper {
+  overflow: hidden;
+  position: relative;
+
+  --v-offset: 60px;
+  --curve-height: 120px;
+  background-color: #faf3e0;
+}
+
+.swiper::before,
+.swiper::after {
+  content: "";
+  z-index: 99;
+  display: block;
+  background: #faf3e0;
+  width: calc(100vw + 2 * 60px); 
+  height: 120px;
+  position: absolute;
+  border-radius: 45%;
+  left: -60px;
+  right: -60px;
+}
+
+.swiper::before {
+  top: calc(-0.7 * 120px);
+}
+
+.swiper::after {
+  bottom: calc(-0.7 * 120px);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 300px;
+  grid-auto-flow: column;
+  gap: 24px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.wrapper .card-body {
+  scroll-snap-align: center;
+}
+.swiper-button-prev, .swiper-button-next{
+  color: #ece3cb;
+}

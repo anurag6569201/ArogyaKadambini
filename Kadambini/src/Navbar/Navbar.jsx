@@ -103,14 +103,13 @@ function MainNavbar() {
           {navLinks.map((link) => (
             <a
               key={link}
-              href="#" // Replace with actual paths
+              href="#" 
               onClick={(e) => { e.preventDefault(); handleLinkClick(link); }}
-              className={`mobile-nav-link ${activeLink === link ? 'active' : ''}`} // Also highlight active link here
+              className={`mobile-nav-link ${activeLink === link ? 'active' : ''}`} 
             >
               {link}
             </a>
           ))}
-          {/* Optionally add the "Start Program" button inside the mobile menu too */}
           <button className="navbar-button start-program-button mobile-menu-button">
             Start Program
           </button>

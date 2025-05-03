@@ -1,34 +1,66 @@
-// src/components/Testimonials.js
 import React from 'react';
-import { Container, Carousel, Card } from 'react-bootstrap';
-import '../assets/css/Landing.css';
+import '../assets/css/Testimonials.css'
+
+import imgMehwish from '../assets/image/plant1.png';
+import imgElizabeth from '../assets/image/plant1.png';
+
+const testimonialsData = [
+    {
+        id: 1,
+        name: 'Mehwish',
+        quote: 'Complimant interested discretion estimating on stimulated apartments oh.',
+        image: imgMehwish,
+        quoteColor: '#e0e0e0' 
+    },
+    {
+        id: 2,
+        name: 'Elizabeth Jeff',
+        quote: 'Dear so sing when in find read of call. As distrusts behaviour abilities defective is.',
+        image: imgElizabeth,
+        highlight: true, 
+        quoteColor: '#8a2be2'
+    },
+];
 
 function Testimonials() {
-    const quotes = [
-        { text: "Arogya Kadambini gave us insights we never had before. Understanding our family's health history is empowering.", author: "A. Sharma - Early User" },
-        { text: "The predictive alerts are a game-changer for preventive care. This tool helps bridge the gap between generations.", author: "Dr. Priya Singh - Healthcare Professional" },
-        { text: "Finally, a way to consolidate decades of family health information securely. It feels like preserving a vital legacy.", author: "R. Kumar - Beta Tester" }
-    ];
-
     return (
-        <section className="testimonials-section py-5">
-            <Container>
-                <h2 className="text-center mb-5 section-title">What People Are Saying</h2>
-                <Carousel indicators={false} interval={5000} className="testimonial-carousel"> {/* Add custom class */}
-                    {quotes.map((quote, index) => (
-                        <Carousel.Item key={index}>
-                            <Card className="border-0 shadow-sm p-4 mx-auto" style={{ maxWidth: '700px' }}>
-                                <Card.Body className="text-center">
-                                    <blockquote className="blockquote mb-0">
-                                        <p>"{quote.text}"</p>
-                                        <footer className="blockquote-footer mt-3">{quote.author}</footer>
-                                    </blockquote>
-                                </Card.Body>
-                            </Card>
-                        </Carousel.Item>
+        <section className="testimonials-section" style={{ position: 'relative' }}>
+            <div class="blur" style={{ position: 'absolute', left: '30%',bottom: '100%', width: '10%', height: '100%',opacity:'.4'}}>
+                <div class="gradient-mask" style={{ position: 'absolute', left: '30%',bottom: '100%', width: '60%', height: '60%'}}>
+                    <div class="spinning-gradient"></div>
+                </div>
+            </div>
+            <div className="testimonials-container">
+                <div className="testimonial-content-left">
+                    <h2>What Our Customers Says</h2>
+                    <p>
+                        Relation so in confined smallest children unpacked
+                        delicate. Why sir end believe uncivil respect. Always
+                        get adieus nature day course for common.
+                    </p>
+                    <button className="navbar-button">View More</button>
+                </div>
+
+                <div className="testimonial-content-right">
+                    {testimonialsData.map((testimonial) => (
+                        <div
+                            key={testimonial.id}
+                            className={`testimonial-card ${testimonial.highlight ? 'highlighted' : ''}`}
+                        >
+                            {testimonial.highlight && <div className="highlight-bar"></div>}
+                            <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                className="testimonial-img"
+                            />
+                            <div className="testimonial-text">
+                                <h4>{testimonial.name}</h4>
+                                <p>{testimonial.quote}</p>
+                            </div>
+                        </div>
                     ))}
-                </Carousel>
-            </Container>
+                </div>
+            </div>
         </section>
     );
 }

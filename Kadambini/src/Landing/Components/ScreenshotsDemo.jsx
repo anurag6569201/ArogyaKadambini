@@ -1,9 +1,7 @@
-// src/components/ScreenshotsDemo.js
 import React from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import '../assets/css/Landing.css';
-// Import placeholder images or actual screenshots
-import placeholderTree from '../assets/image/placeholder-tree.png'; // Create placeholder images
+import placeholderTree from '../assets/image/placeholder-tree.png'; 
 import placeholderReport from '../assets/image/placeholder-report.png';
 
 function ScreenshotsDemo() {
@@ -24,7 +22,6 @@ function ScreenshotsDemo() {
                             <Image src={placeholderReport} fluid rounded alt="AI Report Dashboard Preview"/>
                         </Card>
                     </Col>
-                    {/* Add more screenshots or a demo video embed if available */}
                 </Row>
             </Container>
         </section>

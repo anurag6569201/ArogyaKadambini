@@ -1,0 +1,151 @@
+.testimonials-section {
+  padding: 60px 20px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 95%;
+  gap: 40px;
+}
+
+.testimonial-content-left {
+  flex-basis: 40%;
+  padding-right: 20px;
+}
+
+.testimonial-content-left h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.testimonial-content-left p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.view-more-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #8a2be2, #ff7f50);
+  transition: opacity 0.3s ease;
+}
+
+.view-more-btn:hover {
+  opacity: 0.9;
+}
+
+.testimonial-content-right {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  border: 1px solid #eee;
+  backdrop-filter: blur(3px) saturate(200%);
+  -webkit-backdrop-filter: blur(3px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.testimonial-card.highlighted {
+  padding-left: 35px;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+  background-color: #f5f1dc;
+}
+
+.highlight-bar {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 70%;
+  background-color: #8a2be2;
+  border-radius: 3px;
+}
+
+.testimonial-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.testimonial-text {
+  flex-grow: 1;
+}
+
+.testimonial-text h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  padding-right: 30px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .testimonial-content-left,
+  .testimonial-content-right {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
+
+  .testimonial-content-left {
+    text-align: center;
+  }
+
+  .testimonial-content-left h2 {
+    font-size: 2.2rem;
+  }
+}
