@@ -1,0 +1,516 @@
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+}
+
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+    z-index: 1;
+}
+
+.sub-heading {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.75rem;
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--text-medium);
+    margin-bottom: 2.5rem;
+    /* More space */
+    max-width: 500px;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    /* More space */
+}
+
+.btn {
+    /* Base button style */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    /* Subtle gradient */
+    color: white;
+    padding: 0.9rem 1.8rem;
+    /* Slightly larger padding */
+    border-radius: 50px;
+    font-size: 0.9rem;
+    gap: 0.6rem;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    /* Added shadow */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+.btn-icon {
+    background-color: var(--medium-gray);
+    color: var(--primary-blue);
+    width: 44px;
+    /* Slightly larger */
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+.btn-icon:hover {
+    background-color: #ced4da;
+    transform: scale(1.1);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* More space */
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    margin-top: auto;
+    /* Push to bottom */
+}
+
+/* Using a different icon - fa-gem or fa-chevron-down */
+.scroll-indicator .icon {
+    font-size: 1.2rem;
+    /* Make icon slightly larger */
+}
+
+
+/* Right content section */
+.right-content {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    height: 80vh;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Placeholder for the circular text element (won't be circular text) */
+.explore-details-placeholder {
+    position: absolute;
+    bottom: 2rem;
+    /* Position it somewhere */
+    left: -20px;
+    /* Adjust as needed */
+    transform: rotate(-15deg);
+    color: var(--dark-gray);
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.explore-details-placeholder i {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-blue);
+}
+
+
+/* Floating info card */
+.info-card {
+    background-color: var(--card-bg);
+    padding: 1.8rem;
+    /* Increased padding */
+    border-radius: 15px;
+    /* More rounded */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    /* Enhanced shadow */
+    backdrop-filter: blur(8px);
+    /* Stronger blur */
+    -webkit-backdrop-filter: blur(8px);
+    /* Safari support */
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* Increased gap */
+    width: 280px;
+    /* Slightly wider */
+    z-index: 2;
+    box-sizing: border-box;
+    position: relative;
+    /* Needed for absolute positioning icon */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Subtle border */
+}
+
+/* Sparkle icon on the card */
+.info-card .card-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    opacity: 0.8;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* Increased gap */
+    font-size: 0.95rem;
+    /* Slightly larger font */
+    color: var(--text-medium);
+    /* Use medium text color */
+}
+
+.info-item i {
+    color: var(--primary-blue);
+    width: 22px;
+    /* Slightly larger icon area */
+    text-align: center;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    /* Make icons slightly larger */
+}
+
+.info-item a {
+    color: var(--text-dark);
+    /* Darker link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+    /* Make links slightly bolder */
+}
+
+.info-item a:hover {
+    color: var(--primary-blue);
+}
+
+
+/* Vertical social media links */
+.social-links {
+    position: absolute;
+    right: -50px;
+    /* Further out */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    /* Increased gap */
+    z-index: 3;
+}
+
+.social-links a {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    /* Smaller text */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.social-links a:hover {
+    color: var(--primary-blue);
+    transform: translateX(-3px);
+    /* Shift slightly on hover */
+}
+
+/* Stats section */
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 0;
+    /* More padding */
+    border-top: 1px solid var(--medium-gray);
+    margin-top: 3rem;
+    /* More margin */
+    width: 100%;
+    gap: 2rem;
+    /* Increased gap */
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Reduced gap for avatar overlap */
+    min-width: 180px;
+    /* Give items some minimum width */
+    justify-content: center;
+    /* Center content within the item */
+}
+
+/* Container for overlapping avatars */
+.avatar-group {
+    display: flex;
+    padding-left: 15px;
+    /* Offset to show first avatar */
+}
+
+.stat-item img,
+.stat-item .avatar-placeholder {
+    width: 44px;
+    /* Slightly larger */
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid white;
+    /* White border for overlap effect */
+    margin-left: -15px;
+    /* Negative margin for overlap */
+    background-color: var(--medium-gray);
+    /* Fallback bg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+.stat-item img:first-child,
+.stat-item .avatar-placeholder:first-child {
+    margin-left: 0;
+    /* No negative margin for the first avatar */
+}
+
+
+.stat-text {
+    margin-left: 1rem;
+    /* Space between avatars and text */
+}
+
+.stat-text strong {
+    display: block;
+    font-size: 1.3rem;
+    /* Larger number */
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.stat-text span {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+    }
+
+    .landing-container {
+        padding: 3rem 4rem;
+    }
+
+    .social-links {
+        right: 15px;
+        /* Adjust position */
+    }
+
+    .explore-details-placeholder {
+        left: -30px;
+        /* Adjust position */
+    }
+}
+
+
+@media (min-width: 992px) {
+    .main-heading {
+        font-size: 3.8rem;
+        /* Even larger */
+    }
+
+    .left-content {
+        padding-right: 4rem;
+    }
+
+    .social-links {
+        right: -30px;
+    }
+
+    .explore-details-placeholder {
+        left: -40px;
+        bottom: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-container {
+        padding: 1.5rem;
+    }
+
+    .left-content {
+        padding-right: 0;
+        text-align: center;
+        align-items: center;
+        order: 1;
+        /* Ensure left content comes first */
+    }
+
+    .right-content {
+        order: 2;
+        min-height: 300px;
+    }
+
+    .explore-details-placeholder {
+        display: none;
+        /* Hide placeholder on small screens */
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+    .info-card {
+        width: 90%;
+        max-width: 320px;
+        /* Allow slightly wider card */
+    }
+
+    .social-links {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+        gap: 2rem;
+        writing-mode: horizontal-tb;
+        width: 100%;
+        order: 4;
+        /* Social links after stats */
+    }
+
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        order: 3;
+        /* Stats section third */
+    }
+
+    .stat-item {
+        flex-direction: row;
+        /* Keep row layout for stats */
+        text-align: left;
+        /* Align text left */
+        gap: 1rem;
+        /* Adjust gap */
+        min-width: 0;
+        /* Remove min-width */
+        width: 100%;
+        /* Make full width */
+        justify-content: center;
+        /* Center items */
+    }
+
+    .stat-text {
+        margin-left: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .btn-primary {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .stat-item {
+        flex-direction: column;
+        /* Stack avatars/text vertically */
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .avatar-group {
+        padding-left: 15px;
+        /* Reset padding */
+        justify-content: center;
+        /* Center avatars */
+    }
+
+    .stat-text {
+        margin-left: 0;
+    }
+}
