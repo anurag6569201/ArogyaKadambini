@@ -1,8 +1,8 @@
 import React from 'react';
 import '../assets/css/Testimonials.css'
 
-import imgMehwish from '../assets/image/plant1.png';
-import imgElizabeth from '../assets/image/plant1.png';
+import imgMehwish from '../assets/image/dummy.png';
+import imgElizabeth from '../assets/image/dummy.png';
 
 const testimonialsData = [
     {
@@ -52,6 +52,7 @@ function Testimonials() {
                                 src={testimonial.image}
                                 alt={testimonial.name}
                                 className="testimonial-img"
+                                loading="lazy"
                             />
                             <div className="testimonial-text">
                                 <h4>{testimonial.name}</h4>

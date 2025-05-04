@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --primary-color: #0d6efd;
+    /* Bootstrap primary */
+    --primary-light: #cfe2ff;
+    --primary-dark: #0a58ca;
+    --secondary-color: #6c757d;
+    /* Bootstrap secondary */
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #343a40;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --info-color: #0dcaf0;
+    --white-color: #fff;
+    --body-bg: #f4f7f6;
+    /* Slightly off-white background */
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    --border-radius: 0.5rem;
+    /* Consistent border radius */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Using Inter font */
+    background-color: var(--body-bg);
+}
+
+/* Add Inter font */
+
+
+.pricing-header h1 {
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.pricing-header .lead {
+    color: var(--secondary-color);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feature-explorer {
+    backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.toggle-switch-wrapper {
+    display: inline-flex;
+    /* Use inline-flex */
+    align-items: center;
+    /* Vertically align items */
+    background-color: var(--medium-gray);
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 0.3rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.toggle-switch-wrapper .form-check-input {
+    width: 3em;
+    /* Wider switch */
+    height: 1.5em;
+    margin-top: 0;
+    /* Reset margin */
+    background-color: var(--secondary-color);
+    /* Default off color */
+    border-color: var(--secondary-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, background-position 0.2s ease-in-out;
+}
+
+.toggle-switch-wrapper .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-position: right center;
+    /* Ensure circle moves right */
+}
+
+
+.toggle-switch-wrapper .form-check-label {
+    padding: 0 0.8rem;
+    /* Space around labels */
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.2s ease-in-out;
+    user-select: none;
+    /* Prevent text selection */
+}
+
+.toggle-switch-wrapper .form-check-label.active {
+    color: var(--primary-dark);
+}
+
+/* View Mode Toggle Buttons */
+.view-mode-toggle .btn {
+    border-radius: var(--border-radius) !important;
+    /* Ensure consistent radius */
+    font-weight: 500;
+}
+
+.view-mode-toggle .btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.view-mode-toggle .btn:not(.active) {
+    background-color: var(--white-color);
+    border-color: var(--medium-gray);
+    color: var(--secondary-color);
+}
+
+.view-mode-toggle .btn:not(.active):hover {
+    background-color: var(--light-gray);
+}
+
+
+/* Pricing Cards */
+.pricing-card {
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    background-color: var(--white-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.table_styles {
+    backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.pricing-card.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 20px rgba(13, 110, 253, 0.2);
+    /* Primary color shadow */
+}
+
+.pricing-card .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--medium-gray);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.pricing-card .card-header h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.pricing-card .card-header .plan-icon {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card.selected .card-header .plan-icon {
+    color: var(--primary-dark);
+    /* Darker icon when selected */
+}
+
+
+.pricing-card .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Allow body to grow */
+    text-align: center;
+}
+
+.price-display {
+    margin-bottom: 1rem;
+}
+
+.price-display h2 {
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 0.25rem;
+    /* Reduced margin */
+}
+
+.price-display .period {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.price-display .saving-text {
+    font-size: 0.85rem;
+    color: var(--success-color);
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+.price-display .annual-option-text {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    margin-top: 0.25rem;
+}
+
+
+.plan-description {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    min-height: 3em;
+    /* Ensure space even if description is short */
+}
+
+.pricing-card .btn {
+    margin-top: auto;
+    /* Push button to bottom */
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-card .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.pricing-card .btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.pricing-card .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.pricing-card .btn-outline-primary:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary-color);
+}
+
+.pricing-card .btn-dark {
+    background-color: var(--dark-gray);
+    border-color: var(--dark-gray);
+    color: var(--white-color);
+}
+
+.pricing-card .btn-dark:hover {
+    background-color: #212529;
+    /* Slightly darker gray */
+    border-color: #212529;
+}
+
+
+/* Feature Explorer (Single View) */
+.feature-explorer .nav-pills .nav-link {
+    color: var(--secondary-color);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    /* Space between icon and text */
+}
+
+.feature-explorer .nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.3);
+}
+
+.feature-explorer .nav-pills {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.feature-explorer .list-group-item {
+    border-color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+    /* Vertically align items */
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    /* Consistent padding */
+}
+
+.feature-explorer .list-group-item:last-child {
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.feature-explorer .list-group-item:first-child {
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+.feature-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    /* Space between icon and text/tooltip */
+}
+
+.feature-name-wrapper .feature-icon {
+    color: var(--primary-color);
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+}
+
+.feature-name-wrapper .feature-name {
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+
+.feature-value {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.feature-value .feature-check-icon {
+    flex-shrink: 0;
+}
+
+.feature-value .feature-text-value {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.feature-value .feature-text-muted {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+
+
+
+.comparison-table {
+    min-width: 800px;
+    /* Ensure table has min-width for horizontal scroll */
+    margin-bottom: 0;
+    /* Remove default table margin */
+    border-collapse: separate;
+    /* Needed for sticky header background */
+    border-spacing: 0;
+}
+
+.comparison-table thead th {
+    border-bottom: 2px solid var(--medium-gray);
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    text-align: center;
+    vertical-align: middle;
+    position: sticky;
+    /* Make header sticky */
+    top: 0;
+    z-index: 10;
+}
+
+.comparison-table thead th:first-child {
+    text-align: left;
+    position: sticky;
+    /* Make first column sticky */
+    left: 0;
+    z-index: 11;
+    /* Above other header cells */
+    border-right: 1px solid var(--medium-gray);
+}
+
+.comparison-table tbody td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--medium-gray);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+    /* Remove border on last row */
+}
+
+.comparison-table tbody td:first-child {
+    text-align: left;
+    font-weight: 500;
+    position: sticky;
+    /* Make first column sticky */
+    left: 0;
+    z-index: 9;
+    border-right: 1px solid var(--medium-gray);
+}
+
+/* Highlight Pro column */
+.comparison-table th.plan-pro,
+.comparison-table td.plan-pro {
+    background-color: var(--primary-light);
+}
+
+.comparison-table thead th.plan-pro {
+    background-color: #b9d6fb;
+    /* Slightly darker highlight for header */
+}
+
+.comparison-table thead th:first-child.plan-pro,
+/* Reset sticky header bg */
+.comparison-table tbody td:first-child.plan-pro {
+    /* Reset sticky column bg */
+    background-color: var(--light-gray);
+}
+
+.comparison-table tbody td:first-child.plan-pro {
+    background-color: var(--white-color);
+}
+
+
+.comparison-table .feature-check-icon {
+    margin: 0 auto;
+    /* Center check/cross icons */
+    display: block;
+}
+
+.comparison-table .feature-text-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.comparison-table .feature-text-muted {
+    color: var(--secondary-color);
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+/* Footer Buttons in Table */
+.comparison-table tfoot td {
+    padding: 1.5rem 1.25rem;
+    background-color: var(--light-gray);
+}
+
+.comparison-table tfoot td:first-child {
+    background-color: var(--light-gray);
+    /* Match background */
+}
+
+.comparison-table tfoot .btn {
+    font-weight: 600;
+    width: 90%;
+    /* Make buttons slightly smaller than cell */
+    padding: 0.6rem 1rem;
+}
+
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--medium-gray);
+}
+
+.faq-section h2 {
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+}
+
+.faq-section .accordion-item {
+    background-color: var(--white-color);
+    border: 1px solid var(--medium-gray);
+    border-radius: var(--border-radius) !important;
+    /* Override Bootstrap */
+    margin-bottom: 1rem;
+    /* Space between items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.faq-section .accordion-item:first-of-type,
+.faq-section .accordion-item:last-of-type {
+    border-radius: var(--border-radius) !important;
+    /* Consistent radius */
+}
+
+.faq-section .accordion-header button {
+    font-weight: 600;
+    color: var(--dark-gray);
+    border-radius: var(--border-radius);
+    /* Match item radius */
+    background-color: var(--white-color);
+    box-shadow: none !important;
+    /* Remove Bootstrap focus shadow */
+}
+
+.faq-section .accordion-header button:not(.collapsed) {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.faq-section .accordion-body {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 1rem 1.5rem;
+    /* Adjust padding */
+}
+
+/* Tooltip styling */
+.tooltip-inner {
+    background-color: var(--dark-gray);
+    color: var(--white-color);
+    border-radius: 0.25rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--dark-gray);
+}
+
+/* Add more arrow directions if needed */
+
+/* Badge Styling */
+.badge.bg-info {
+    background-color: var(--info-color) !important;
+    color: var(--dark-gray) !important;
+    font-weight: 600;
+    padding: 0.5em 0.75em;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary-color) !important;
+    color: var(--white-color) !important;
+    font-weight: 500;
+}
+
+.comparison-table-wrapper th{
+    background-color: transparent !important;
+}
+.comparison-table-wrapper td{
+    background-color: transparent !important;
+}

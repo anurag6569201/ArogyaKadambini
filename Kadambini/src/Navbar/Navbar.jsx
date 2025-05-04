@@ -1,6 +1,8 @@
 import './assets/css/navbar.css';
 import React, { useState, useEffect } from 'react';
 import LogoIcon from './assets/image/logo.png';
+import { Link } from 'react-router-dom';
+
 
 const MenuIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -41,7 +43,7 @@ function MainNavbar() {
   }, [isMobileMenuOpen]);
 
 
-  const navLinks = ["Home", "About Us", "Procedures", "Reviews"];
+  const navLinks = ["Home", "About Us", "Procedures", "Pricing"];
 
   return (
     <>
@@ -58,16 +60,13 @@ function MainNavbar() {
           <div className="navbar-section nav-links-section">
             {navLinks.map((link, index) => (
               <React.Fragment key={link}>
-                <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleLinkClick(link);
-                  }}
+                <Link
+                  to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
+                  onClick={() => handleLinkClick(link)}
                   className={`nav-link ${activeLink === link ? 'active' : ''}`}
                 >
                   {link}
-                </a>
+                </Link>
                 {index < navLinks.length - 1 && (
                   <span className="nav-separator">/</span>
                 )}
@@ -78,7 +77,7 @@ function MainNavbar() {
 
         <div className="navbar-section buttons-section">
           <button className="navbar-button start-program-button">
-           Health Mapping
+            Health Mapping
           </button>
 
           <button className="navbar-button menu-button menu-button-mobile" onClick={toggleMobileMenu} aria-label="Open menu">
@@ -101,14 +100,13 @@ function MainNavbar() {
         </button>
         <div className="mobile-menu-links">
           {navLinks.map((link) => (
-            <a
-              key={link}
-              href="#" 
-              onClick={(e) => { e.preventDefault(); handleLinkClick(link); }}
-              className={`mobile-nav-link ${activeLink === link ? 'active' : ''}`} 
+            <Link
+              to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
+              onClick={() => handleLinkClick(link)}
+              className={`nav-link ${activeLink === link ? 'active' : ''}`}
             >
               {link}
-            </a>
+            </Link>
           ))}
           <button className="navbar-button start-program-button mobile-menu-button">
             Start Program
