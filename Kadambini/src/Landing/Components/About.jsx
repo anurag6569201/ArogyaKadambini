@@ -4,21 +4,27 @@ import '../assets/css/Landing.css';
 
 function About() {
     return (
-        <section className="about-section py-5">
+        <section className="about-heritage-section">
             <Container>
                 <Row className="justify-content-center">
-                    <Col md={10} lg={8} className="text-center">
-                        <h2 className="mb-4 section-title">About Arogya Kadambini</h2>
-                        <p className="lead mb-4">
-                            Arogya Kadambini represents the fusion of deep-rooted family heritage and cutting-edge Artificial Intelligence. Born from the need to bridge the gap between generational health knowledge and modern preventive care.
-                        </p>
-                        <h5>Our Vision & Mission</h5>
-                        <p>
-                            To empower individuals and families globally to understand, predict, and proactively manage their hereditary health, preserving this vital knowledge for future generations. We aim to turn reactive healthcare into proactive, informed wellness.
-                        </p>
-                        <blockquote className="blockquote mt-4">
-                            <p>"You can inherit more than just land or genes. You inherit health patterns and with ArogyaKadambini, you inherit wisdom."</p>
-                        </blockquote>
+                    <Col md={10} lg={8}>
+                        <div className="heritage-scroll glassmorph p-5">
+                            <h2 className="heritage-title text-center mb-3">About Arogya Kadambini</h2>
+                            <div className="scroll-divider mx-auto mb-4"></div>
+
+                            <p className="heritage-lead">
+                                <span className="dropcap">A</span>rogya Kadambini is the union of ancestral wisdom and modern AI—a platform born to bridge generational health heritage with future-focused wellness. It carries the soul of family lineage and the mind of innovation.
+                            </p>
+
+                      ¯      <h5 className="mt-4 mb-3 mission-title">Our Vision & Mission</h5>
+                            <p>
+                                To empower individuals and families across generations to understand, trace, and manage hereditary health paths with confidence. Arogya Kadambini transforms passive awareness into proactive care, and stories into data-driven legacies.
+                            </p>
+
+                            <blockquote className="heritage-quote mt-4">
+                                “You inherit more than land or genes — with Arogya Kadambini, you inherit wisdom.”
+                            </blockquote>
+                        </div>
                     </Col>
                 </Row>
             </Container>
