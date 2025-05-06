@@ -61,6 +61,7 @@ function MainNavbar() {
             {navLinks.map((link, index) => (
               <React.Fragment key={link}>
                 <Link
+                  key={link}
                   to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
                   onClick={() => handleLinkClick(link)}
                   className={`nav-link ${activeLink === link ? 'active' : ''}`}
@@ -101,6 +102,7 @@ function MainNavbar() {
         <div className="mobile-menu-links">
           {navLinks.map((link) => (
             <Link
+              key={link}
               to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
               onClick={() => handleLinkClick(link)}
               className={`nav-link ${activeLink === link ? 'active' : ''}`}

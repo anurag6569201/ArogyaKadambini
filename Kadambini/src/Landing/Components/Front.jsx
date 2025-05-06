@@ -18,9 +18,6 @@ function Front() {
                                 Begin Health Mapping
                                 <i class="fas fa-play"></i>
                             </a>
-                            <a href="#" class="btn btn-icon">
-                                <i class="fas fa-play"></i>
-                            </a>
                         </div>
 
                     </div>

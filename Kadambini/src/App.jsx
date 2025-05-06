@@ -6,6 +6,7 @@ import Landing from './Landing/Landing';
 import About from './Landing/Components/About';
 import Procedures from './Landing/Components/Procedures';
 import Pricing from './Landing/Components/Pricing';
+import Footer from './Landing/Components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/procedures" element={<Procedures />} />
         <Route path="/pricing" element={<Pricing />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

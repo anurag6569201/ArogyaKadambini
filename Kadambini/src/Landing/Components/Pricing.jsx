@@ -180,7 +180,7 @@ function Pricing() {
           </div>
         </div>
         <div className="container-fluid" style={{ position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div className="col-md-10 col-lg-10">
+          <div className="col-md-10 col-lg-10" style={{display:'flex',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
             <Container className="table_styles" >
 
               {viewMode === 'single' ? (
@@ -268,6 +268,7 @@ function Pricing() {
                 </div>
               )}
             </Container>
+            <img height='300px' src={PricingImage} alt="" />
           </div>
         </div>
 
