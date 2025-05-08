@@ -1,0 +1,16 @@
+@media (max-width:600px) {
+    .landing-container .right-content{
+        padding: 0px;
+        width: 100%;
+        min-height:400px;
+    }
+    .landing-container .main-content{
+        gap: 0px;
+    }
+    .landing-container .right-content .social-links{
+        display: none;
+    }
+    .landing-container .stats-section{
+        border: none;
+    }
+}

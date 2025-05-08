@@ -52,9 +52,9 @@ function UseCases() {
     ];
 
     return (
-        <section className="use-cases-section py-5">
-            <div className="container-fluid">
-                <h2 className="text-center mb-5 section-title animate__animated animate__fadeInDown">
+        <section className="use-cases-section py-1">
+            <div className="container-fluid p-0">
+                <h2 className="text-center mb-4 section-title animate__animated animate__fadeInDown">
                     Who Is It For?
                 </h2>
 

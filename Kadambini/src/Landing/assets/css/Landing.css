@@ -10,6 +10,9 @@
     overflow: hidden;
 }
 
+.landing-container-space{
+    padding: 2rem;
+}
 .main-content {
     display: flex;
     flex-direction: column;
@@ -287,6 +290,9 @@
     .landing-container {
         padding: 3rem 4rem;
     }
+    .landing-container-space{
+        padding: 3rem 4rem;
+    }
 
     .social-links {
         right: 15px;
@@ -319,6 +325,9 @@
 
 @media (max-width: 767px) {
     .landing-container {
+        padding: 1.5rem;
+    }
+    .landing-container-space{
         padding: 1.5rem;
     }
 

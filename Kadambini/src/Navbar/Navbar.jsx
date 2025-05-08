@@ -44,6 +44,7 @@ function MainNavbar() {
 
 
   const navLinks = ["Home", "About Us", "Procedures", "Pricing"];
+  const mainNavLinks = ["Home", "About Us", "Procedures", "Pricing"];
 
   return (
     <>
@@ -100,7 +101,7 @@ function MainNavbar() {
           <CloseIcon />
         </button>
         <div className="mobile-menu-links">
-          {navLinks.map((link) => (
+          {mainNavLinks.map((link) => (
             <Link
               key={link}
               to={link === "Home" ? "/" : `/${link.toLowerCase().replace(/\s+/g, '')}`}
@@ -110,9 +111,6 @@ function MainNavbar() {
               {link}
             </Link>
           ))}
-          <button className="navbar-button start-program-button mobile-menu-button">
-            Start Program
-          </button>
         </div>
       </div>
     </>

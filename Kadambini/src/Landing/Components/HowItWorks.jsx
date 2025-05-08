@@ -19,14 +19,14 @@ function HowItWorks() {
 
 
     return (
-        <section className="how-it-works-section py-5" style={{ position: 'relative' }}>
+        <section className="how-it-works-section py-5 landing-container-space" style={{ position: 'relative' }}>
             <div class="blur">
                 <div class="gradient-mask">
                     <div class="spinning-gradient"></div>
                 </div>
             </div>
-            <Container>
-                <h2 className="text-center mb-5 section-title">How Arogya Kadambini Works</h2>
+            <Container className='p-0'>
+                <h2 className="text-center mb-4 section-title">How Arogya Kadambini Works</h2>
 
                 <Row xs={1} md={2} lg={4} className="g-4 mb-5">
                     {stepsDataForCards.map((step, index) => (

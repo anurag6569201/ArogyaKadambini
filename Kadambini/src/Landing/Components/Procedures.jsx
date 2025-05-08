@@ -86,7 +86,7 @@ function Procedures() {
       </Container>
 
       <Container>
-      <div className="d-flex align-items-center justify-content-center" style={{ flexDirection: 'column' }}>
+        <div className="d-flex align-items-center justify-content-center" style={{ flexDirection: 'column' }}>
           <h1 className="text-center heritage-title section-title m-0">The Technology We Use</h1>
           <img height='150px' src={PricingImage} alt="" />
         </div>
@@ -108,7 +108,7 @@ function Procedures() {
       </Container>
 
       <Container>
-      <div className="d-flex align-items-center justify-content-center" style={{ flexDirection: 'column' }}>
+        <div className="d-flex align-items-center justify-content-center" style={{ flexDirection: 'column' }}>
           <h1 className="text-center heritage-title section-title m-0">Frequently Asked Questions!</h1>
           <img height='150px' src={PricingImage} alt="" />
         </div>
