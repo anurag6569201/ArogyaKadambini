@@ -22,7 +22,7 @@
 .authentication-wrapper .glogin-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .authentication-wrapper .glogin-left h2 {

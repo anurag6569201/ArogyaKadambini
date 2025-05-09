@@ -75,7 +75,7 @@ function GLogin() {
                                 />
                                 Remember me
                             </label>
-                            <Link to="/accounts/password/reset/">Forgot Password?</Link>
+                            <Link style={{textDecoration:'underline'}} to="/auth/password/reset/">Forgot Password?</Link>
                         </div>
                         {error && <p className="error-msg">{error}</p>}
                         <button className="navbar-button w-100 text-center" type="submit"><span>Login</span></button>
