@@ -1,0 +1,175 @@
+.glogin-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.authentication-wrapper .glogin-container {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 93%;
+}
+
+.authentication-wrapper .glogin-left,
+.authentication-wrapper .glogin-right {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.authentication-wrapper .glogin-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.authentication-wrapper .glogin-left h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2e2e2e;
+}
+
+.authentication-wrapper .glogin-left p {
+    margin: 1rem 0 2rem;
+    color: #555;
+}
+
+.authentication-wrapper .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.authentication-wrapper .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.authentication-wrapper .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #fefefe;
+}
+
+.authentication-wrapper .form-remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.authentication-wrapper .form-remember a {
+    color: #b9b48c;
+    text-decoration: none;
+}
+
+
+
+.authentication-wrapper .divider {
+    text-align: center;
+    margin: 1rem 0;
+    color: #aaa;
+    position: relative;
+}
+
+.authentication-wrapper .divider::before,
+.authentication-wrapper .divider::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    background: #ddd;
+    top: 50%;
+}
+
+.authentication-wrapper .divider::before {
+    left: 0;
+}
+
+.authentication-wrapper .divider::after {
+    right: 0;
+}
+
+.authentication-wrapper .google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.authentication-wrapper .google-login img {
+    width: 25px;
+}
+
+.authentication-wrapper .register-text {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.authentication-wrapper .register-text a {
+    color: #b9b48c;
+    text-decoration: none;
+}
+
+.authentication-wrapper .glogin-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.authentication-wrapper .glogin-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.authentication-wrapper .error-msg {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.authentication-wrapper .navbar-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    backdrop-filter: blur(3px) saturate(200%);
+    -webkit-backdrop-filter: blur(3px) saturate(200%);
+    background-color: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.authentication-wrapper .navbar-button:hover {
+    transform: translateY(-2px);
+    transition: 0.3s;
+    background-color: #f5f1dc;
+}
+
+.authentication-wrapper .navbar-button:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+.authentication-wrapper select,
+.authentication-wrapper input{
+    background-color: #fffbee !important;
+}

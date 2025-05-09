@@ -2,7 +2,7 @@ import './assets/css/navbar.css';
 import React, { useState, useEffect } from 'react';
 import LogoIcon from './assets/image/logo.png';
 import { Link } from 'react-router-dom';
-
+import PricingImage from '../Landing/assets/image/price.png';
 
 const MenuIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -78,9 +78,7 @@ function MainNavbar() {
         </div>
 
         <div className="navbar-section buttons-section">
-          <button className="navbar-button start-program-button">
-            Health Mapping
-          </button>
+            <Link style={{textDecoration:'none'}} className='navbar-button start-program-button' to="/auth/signin">Signin / Signup</Link>
 
           <button className="navbar-button menu-button menu-button-mobile" onClick={toggleMobileMenu} aria-label="Open menu">
             <MenuIcon />
@@ -97,10 +95,20 @@ function MainNavbar() {
       {isMobileMenuOpen && <div className="background-overlay" onClick={toggleMobileMenu}></div>}
 
       <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+          <div className="navbar-section logo-section">
+            <img src={LogoIcon} alt="" height='35' />
+            <span className="logo_text">
+              <span className="logo-text">AROGYA</span>
+              <span className="logo-text-subscript">KADAMBINI</span>
+            </span>
+          </div>
         <button onClick={toggleMobileMenu} className="close-menu-button" aria-label="Close menu">
           <CloseIcon />
         </button>
-        <div className="mobile-menu-links">
+          </div>
+        <div className="mobile-menu-links text-center">
+          <img height='150px' src={PricingImage} alt="" style={{transform:'scaleY(-1)'}}/>
           {mainNavLinks.map((link) => (
             <Link
               key={link}
